@@ -3,5 +3,5 @@ from . import views
 
 urlpatterns = [
     path('', views.galeria, name='home'),
-    path('image/', views.image, name='image'),
+    path('image/<int:foto_id>', views.image, name='image'),
 ]
