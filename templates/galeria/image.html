@@ -5,7 +5,11 @@
             <section class="conteudo">
                 <section class="imagem">
                     <div class="imagem__conteudo">
-                        <img class="imagem__imagem" src="{% static 'galeria/assets/imagens/galerias/'%}{{ fotografia.foto }}">
+                    {% if fotografia.foto == '' or fotografia.foto == null %}
+                        <img class="imagem__imagem" src="{% static 'galeria/assets/imagens/galerias/not_found.jpg'%}">
+                    {% else %}
+                        <img class="imagem__imagem" src="{{ fotografia.foto.url }}">
+                    {% endif %}
                         <div class="imagem__info">
                             <div class="imagem__texto">
                                 <p class="imagem__titulo">{{ fotografia.nome }}</p>

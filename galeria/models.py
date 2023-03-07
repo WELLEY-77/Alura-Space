@@ -19,4 +19,4 @@ class Fotografia(models.Model):
     data_fotografia = models.DateTimeField(blank=False, default=datetime.now)
 
     def __str__(self):
-        return f'Fotografia [{self.nome}]'
+        return self.nome
