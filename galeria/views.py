@@ -4,7 +4,7 @@ from .models import Fotografia
 
 def galeria(request):
 
-    fotografias = Fotografia.objects.all()
+    fotografias = Fotografia.objects.order_by('data_fotografia').filter(publicada=True)
 
     dados = {
         'fotografias': fotografias
