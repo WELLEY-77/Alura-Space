@@ -12,8 +12,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
     <!-- CSS only -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <link rel="stylesheet" href="{% static 'galeria/styles/style.css' %}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
 </head>
 
 <body>
@@ -42,7 +42,7 @@
                     <a href="{% url 'home' %}"><img src="{% static 'galeria/assets/ícones/1x/Home - ativo.png' %}"> Home</a>
                     <a href="{% url 'login' %}"><img src="{% static 'galeria/assets/ícones/1x/Mais vistas - inativo.png' %}"> Login</a>
                     <a href="{% url 'cadastro' %}"><img src="{% static 'galeria/assets/ícones/1x/Novas - inativo.png' %}"> Cadastrar</a>
-                    <a href="#"><img src="{% static 'galeria/assets/ícones/1x/Surpreenda-me - inativo.png' %}"> Logout</a>
+                    <a href="{% url 'logout' %}"><img src="{% static 'galeria/assets/ícones/1x/Surpreenda-me - inativo.png' %}"> Logout</a>
                 </nav>
             </section>
             <section class="galeria" style="margin-left: 5em">
